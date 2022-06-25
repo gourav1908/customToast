@@ -10,14 +10,16 @@ import androidx.cardview.widget.CardView
 
 
 object CustomToast {
-    fun showCustomToast(context: Context, s: String, color: Int) {
+    fun showCustomToast(context: Context, s: String, textColor: Int, bgColor: Int) {
         val toast = Toast(context)
         val view: View = LayoutInflater.from(context)
             .inflate(R.layout.toast_layout, null)
 
         val msg = view.findViewById<TextView>(R.id.tvMessage)
         val card_view = view.findViewById<CardView>(R.id.card_view)
-        card_view.setCardBackgroundColor(context.resources.getColor(color))
+
+        msg.setTextColor(context.resources.getColor(textColor))
+        card_view.setCardBackgroundColor(context.resources.getColor(bgColor))
         msg.text = s
         toast.view = view
         toast.show()

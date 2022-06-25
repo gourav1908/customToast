@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val btn_show: Button = findViewById(R.id.btn_show)
 
         btn_show.setOnClickListener {
-            CustomToast.showCustomToast(this, "hello custom toast", R.color.black)
+            CustomToast.showCustomToast(this, "hello custom toast", R.color.teal_700, R.color.black)
         }
 
     }
